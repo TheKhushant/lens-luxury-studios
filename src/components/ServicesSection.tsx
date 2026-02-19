@@ -1,12 +1,12 @@
 import { Camera, Video, Plane, Sparkles, Heart, Building } from "lucide-react";
 
 const services = [
-  { icon: Heart, title: "Wedding Photography", desc: "Timeless moments captured with cinematic elegance and emotion.", price: "From $2,500" },
-  { icon: Camera, title: "Fashion & Editorial", desc: "High-end fashion shoots with creative direction and styling.", price: "From $1,800" },
-  { icon: Building, title: "Product Photography", desc: "Clean, compelling product imagery for brands and e-commerce.", price: "From $800" },
-  { icon: Video, title: "Cinematic Videos", desc: "4K cinematic videography for events, brands, and storytelling.", price: "From $3,000" },
-  { icon: Sparkles, title: "Event Coverage", desc: "Full event documentation from corporate galas to private celebrations.", price: "From $1,500" },
-  { icon: Plane, title: "Drone Aerial", desc: "Breathtaking aerial perspectives with licensed drone operators.", price: "From $1,200" },
+  { icon: Heart, title: "Wedding Photography", desc: "Timeless moments captured with cinematic elegance and emotion.", price: "From ₹2,500" },
+  { icon: Camera, title: "Fashion & Editorial", desc: "High-end fashion shoots with creative direction and styling.", price: "From ₹1,800" },
+  { icon: Building, title: "Product Photography", desc: "Clean, compelling product imagery for brands and e-commerce.", price: "From ₹800" },
+  { icon: Video, title: "Cinematic Videos", desc: "4K cinematic videography for events, brands, and storytelling.", price: "From ₹3,000" },
+  { icon: Sparkles, title: "Event Coverage", desc: "Full event documentation from corporate galas to private celebrations.", price: "From ₹1,500" },
+  { icon: Plane, title: "Drone Aerial", desc: "Breathtaking aerial perspectives with licensed drone operators.", price: "From ₹1,200" },
 ];
 
 const droneSpecs = [
@@ -69,9 +69,9 @@ export default function ServicesSection() {
           {/* Drone packages */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
             {[
-              { title: "Starter Aerial", price: "$1,200", features: ["30 min flight", "50 edited photos", "1080p video", "5km range"] },
-              { title: "Pro Aerial", price: "$2,800", features: ["60 min flight", "150 edited photos", "4K video", "10km range", "Cinematic edit"] },
-              { title: "Enterprise Aerial", price: "$5,000+", features: ["Full day coverage", "Unlimited photos", "8K video", "Custom flight plan", "Licensed survey"] },
+              { title: "Starter Aerial", price: "₹1,200", features: ["30 min flight", "50 edited photos", "1080p video", "5km range"] },
+              { title: "Pro Aerial", price: "₹2,800", features: ["60 min flight", "150 edited photos", "4K video", "10km range", "Cinematic edit"] },
+              { title: "Enterprise Aerial", price: "₹5,000+", features: ["Full day coverage", "Unlimited photos", "8K video", "Custom flight plan", "Licensed survey"] },
             ].map((pkg) => (
               <div key={pkg.title} className="glass rounded-2xl p-8 relative overflow-hidden group hover:glow-purple transition-all duration-300">
                 <h4 className="text-lg font-bold text-foreground mb-2">{pkg.title}</h4>
