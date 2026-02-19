@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 const gridImages = Array.from(
-  { length: 10 },
+  { length: 3 },
   (_, i) => `/grid${i + 1}.jpeg`
 );
 
@@ -9,8 +9,8 @@ const projects = [
   { year: "2026", client: "Sharma & Patel", type: "Wedding", location: "Udaipur, India", desc: "A lavish 3-day wedding celebration captured across palace grounds and lakeside venues.", metrics: "500+ photos • 45 min film", image: gridImages[0]
  },
   { year: "2024", client: "Luxe Fashion Co.", type: "Fashion Editorial", location: "Milan, Italy", desc: "SS24 campaign shot across iconic Milanese architecture with 12 models.", metrics: "3 magazine features • 2M reach", image: gridImages[1] },
-  { year: "2024", client: "SkyView Estates", type: "Drone Aerial", location: "Dubai, UAE", desc: "Aerial real estate showcase for a premium beachfront development.", metrics: "8K footage • 200+ aerial shots", image: gridImages[2], },
-  { year: "2023", client: "TechVision Summit", type: "Event Coverage", location: "San Francisco, USA", desc: "Full documentation of a 2-day technology conference with 5000+ attendees.", metrics: "1200 photos • Same-day highlights" },
+  { year: "2023", client: "TechVision Summit", type: "Event Coverage", location: "San Francisco, USA", desc: "Full documentation of a 2-day technology conference with 5000+ attendees.", metrics: "1200 photos • Same-day highlights", image: gridImages[2],  },
+  { year: "2024", client: "SkyView Estates", type: "Drone Aerial", location: "Dubai, UAE", desc: "Aerial real estate showcase for a premium beachfront development.", metrics: "8K footage • 200+ aerial shots", },
   { year: "2025", client: "Sharma & Patel", type: "Wedding", location: "Udaipur, India", desc: "A lavish 3-day wedding celebration captured across palace grounds and lakeside venues.", metrics: "500+ photos • 45 min film" },
   { year: "2024", client: "Luxe Fashion Co.", type: "Fashion Editorial", location: "Milan, Italy", desc: "SS24 campaign shot across iconic Milanese architecture with 12 models.", metrics: "3 magazine features • 2M reach" },
   { year: "2024", client: "SkyView Estates", type: "Drone Aerial", location: "Dubai, UAE", desc: "Aerial real estate showcase for a premium beachfront development.", metrics: "8K footage • 200+ aerial shots" },
@@ -98,7 +98,7 @@ export default function ProjectsSection() {
             Previous <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-            Swipe or watch our portfolio auto-scroll through featured projects
+            Swipe or watch our portfolio auto-scroll through featured projectsz
           </p>
         </div>
 
@@ -154,13 +154,23 @@ export default function ProjectsSection() {
                       {project.year}
                     </div>
 
-                    {/* Thumbnail placeholder */}
-                    <div className="w-full h-32 rounded-lg bg-gradient-to-br from-primary/20 to-accent/10 group-hover:scale-105 transition-transform duration-500 mb-4" />
+                    {/* Image */}
+                    <div className="w-full h-32 rounded-lg overflow-hidden mb-4">
+                      <img 
+                        src={project.image} 
+                        alt={project.client}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = 'https://via.placeholder.com/400x200?text=Image+Not+Found';
+                        }}
+                      />
+                    </div>
 
                     <div className="flex-1">
                       <span className="text-[10px] text-primary font-medium uppercase tracking-wider">{project.type}</span>
                       <h3 className="text-lg font-bold text-foreground mt-1 line-clamp-1">{project.client}</h3>
-                      <p className="text-xs text-muted-foreground mt-1 line-clamp-1">📍 {project.location}</p>
+                      <p className="text-xs text-muted-foreground mt-1 line-clamp-1"> {project.location}</p>
                       <p className="text-xs text-muted-foreground mt-2 line-clamp-2">{project.desc}</p>
                       <p className="text-[10px] text-accent mt-2 font-medium">{project.metrics}</p>
                     </div>
