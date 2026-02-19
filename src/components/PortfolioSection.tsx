@@ -111,7 +111,7 @@ export default function PortfolioSection() {
 function BeforeAfterSlider() {
   const [position, setPosition] = useState(50);
 
-  const beforeImage = "/after.jpeg";
+  const beforeImage = "/after.png";
   const afterImage = "/before.jpeg";
 
   return (
