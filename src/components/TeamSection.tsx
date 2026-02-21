@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 
 const team = [
-  { name: "Alex Rivera", role: "Lead Photographer", specs: ["Wedding", "Fashion"], exp: "12 years" },
+  { name: "Yash Channe", role: "Lead Photographer", specs: ["Wedding", "Fashion"], exp: "12 years",image: "/yashhh.jpg"},
   { name: "Mia Chen", role: "Drone Specialist", specs: ["Aerial", "Real Estate"], exp: "8 years" },
   { name: "Jordan Brooks", role: "Cinematographer", specs: ["Cinematic", "Events"], exp: "10 years" },
   { name: "Priya Sharma", role: "Fashion Photographer", specs: ["Editorial", "Product"], exp: "6 years" },
@@ -24,7 +24,11 @@ export default function TeamSection() {
               key={member.name}
               className="glass rounded-2xl p-8 text-center group hover:glow-purple transition-all duration-500 reveal"
             >
-              <div className="w-24 h-24 rounded-full mx-auto mb-6 bg-gradient-to-br from-primary/30 to-accent/20 group-hover:scale-110 transition-transform duration-300" />
+              <img
+               src={member.image}
+               alt={member.name}
+               className="w-24 h-24 rounded-full mx-auto mb-6 object-cover"
+              />
               <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
               <p className="text-sm text-primary mt-1">{member.role}</p>
               <p className="text-xs text-muted-foreground mt-1">{member.exp} experience</p>

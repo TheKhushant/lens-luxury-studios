@@ -36,8 +36,8 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-foreground mb-4">Contact</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> hello@photostudio.com</li>
-              <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> +1 (555) 123-4567</li>
+              <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> lens@photostudio.com</li>
+              <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> +91 8568712315</li>
               <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary" /> New York, NY 10001</li>
             </ul>
           </div>
