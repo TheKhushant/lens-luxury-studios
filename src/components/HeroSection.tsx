@@ -4,8 +4,14 @@ import { ArrowRight, Play } from "lucide-react";
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary" />
+     {/* Background Image */}
+    <div
+     className="absolute inset-0 bg-cover bg-center"
+     style={{ backgroundImage: "url('/background.jpg')" }}
+     />
+
+     {/* Dark overlay */}
+     <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Geometric shapes */}
       <div className="absolute top-20 left-10 w-32 h-32 border border-primary/20 rotate-45 animate-float opacity-30" />
